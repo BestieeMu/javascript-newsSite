@@ -44,12 +44,15 @@ cards
 }
 
 .cart{
+    position: relative;
     height: 40px;
     background-color: #000;
     color: #fff;
-    margin: 10px 0 10px 0;
+    margin: 10px auto;
     padding: 5px;
+    max-width: 500px;
 }
 .cart h1{
     font-size: 20px;
+    text-align: center;
 }
