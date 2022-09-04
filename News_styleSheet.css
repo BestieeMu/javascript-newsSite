@@ -5,9 +5,8 @@
 }
 .all-cont{
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translateX(-50%);
     width: 1200px;
     border: 1px solid #000;
 }
@@ -16,10 +15,11 @@ Nav bar
 /////////////////////*/
 .navbar{
     background-color: #fec226;
+    position: relative;
 }
 .container-fluid{
     height: 100px;
-    
+    position: relative;
 }
 .container-fluid .navbar-brand{
     font-family: 'lobster', serif;
@@ -44,12 +44,15 @@ cards
 }
 
 .cart{
+    position: relative;
     height: 40px;
     background-color: #000;
     color: #fff;
-    margin: 10px 0 10px 0;
+    margin: 10px auto;
     padding: 5px;
+    max-width: 500px;
 }
 .cart h1{
     font-size: 20px;
+    text-align: center;
 }
