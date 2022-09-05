@@ -37,8 +37,7 @@ cards
 #demo{
     display: grid;
     gap: 10px;
-    grid-template-columns: auto  ;
-    width: 800px;
+    grid-template-columns: 1fr, 1fr;
     height: 2000px;
     overflow: hidden;
 }
