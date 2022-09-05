@@ -30,12 +30,12 @@ async function getNews() {
           <div class="container">
   <div class="row">
     <div class="col ">
-    <div class='card' style='width: 600px; border: 2px solid green; padding: 0px;'>
+    <div class='card' style='border: 2px solid green; padding: 0px;'>
     <div class='card-body' style="display: flex; flex-direction: row;">
 <image src="${response.articles[i].media}" style="width: 200px; height: 150px;" />
 
     <div class='card-text' style="display: flex; flex-direction: column; padding-left: 15px;">
-    <a style="text-decoration: none;" href="${response.articles[i].link}  "><h2 style='  color:#a10035;'>${response.articles[i].title}</h2></a>
+    <a style="text-decoration: none;" href="${response.articles[i].link}  "><h2 style=' color:#a10035;'>${response.articles[i].title}</h2></a>
     </div>
     </div>
     </div>
