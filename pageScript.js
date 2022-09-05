@@ -24,7 +24,7 @@ async function getNews() {
    .then(response => response.json()) 
    .then(response =>  {
          let resData = response?.articles //assinging the articles array to resData
-         var list = resData.filter(news => news._id === id); //filtering the arrays with the id
+         var list = resData.filter(news => news._id === id); //filtering the arrays with the id, cheking if id exist in news._id
 
          document.getElementById('data').innerHTML +=`
          <div style='width: 500px;'>  <!--the page container -->
