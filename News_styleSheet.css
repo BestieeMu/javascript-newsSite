@@ -4,10 +4,10 @@
     margin: 0;
 }
 .all-cont{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1200px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid #000;
 }
 /*/////////\\\\\\\\\\\
@@ -50,6 +50,7 @@ cards
     color: #fff;
     margin: 10px auto;
     padding: 5px;
+    width: 80%;
     max-width: 500px;
 }
 .cart h1{
