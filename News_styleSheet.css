@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.all-cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 1200px;
+    border: 1px solid #000;
+}
+/*/////////\\\\\\\\\\\
+Nav bar
+/////////////////////*/
+.navbar{
+    background-color: #fec226;
+}
+.container-fluid{
+    height: 100px;
+    
+}
+.container-fluid .navbar-brand{
+    font-family: 'lobster', serif;
+    font-size: 60px;
+    margin-left: 40px;
+    color: #fff;
+}
+.search-box{
+    position: absolute;
+    right: 5%;
+    }
+/*//////////////
+cards
+/////////////////*/
+#demo{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto  ;
+    width: 800px;
+    height: 2000px;
+    overflow: hidden;
+}
+
+.cart{
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    margin: 10px 0 10px 0;
+    padding: 5px;
+}
+.cart h1{
+    font-size: 20px;
+}
