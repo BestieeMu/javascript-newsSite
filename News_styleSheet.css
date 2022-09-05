@@ -37,11 +37,15 @@ cards
 #demo{
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     height: 2000px;
     overflow: hidden;
 }
-
+@media screen and (min-width: 700px){
+    #demo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 .cart{
     position: relative;
     height: 40px;
