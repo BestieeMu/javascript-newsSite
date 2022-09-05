@@ -35,7 +35,7 @@ async function getNews() {
 <image src="${response.articles[i].media}" style="width: 200px; height: 150px;" />
 
     <div class='card-text' style="display: flex; flex-direction: column; padding-left: 15px;">
-    <a style="text-decoration: none;" href="${response.articles[i].link}  "><h2 style=' color:#a10035;'>${response.articles[i].title}</h2></a>
+    <a style="text-decoration: none;" href="${response.articles[i].link}  "><h4 style=' color:#a10035;'>${response.articles[i].title}</h4></a>
     </div>
     </div>
     </div>
