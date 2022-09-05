@@ -1,10 +1,4 @@
-
-
-
-
-
-  
-
+imges = []
 
 async function getNews() {
   const options = {
@@ -14,11 +8,11 @@ async function getNews() {
     'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
   }
 };
- await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=football&lang=en&sort_by=relevancy&page=1&media=True', options)
+ await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=car&lang=en&sort_by=relevancy&page=1&media=True', options)
  .then(response => response.json())
  .then(response =>  {
-    for (let i = 0; i < response.articles.length; i++) {
-    console.log(response);
+   console.log(response);
+    for (let i = 0; i < response?.articles?.length; i++) {
      const output = document.getElementById('demo');
     
     
@@ -35,7 +29,7 @@ async function getNews() {
 <image src="${response.articles[i].media}" style="width: 200px; height: 150px;" />
 
     <div class='card-text' style="display: flex; flex-direction: column; padding-left: 15px;">
-    <a style="text-decoration: none;" href="${response.articles[i].link}  "><h4 style=' color:#a10035;'>${response.articles[i].title}</h4></a>
+    <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}&name=chidera"><h4 style='  color:#a10035;'>${response.articles[i].title}</h4></a>
     </div>
     </div>
     </div>
@@ -57,11 +51,6 @@ async function getNews() {
 
 }
 getNews()
-
-
-
-
-
 
 
 async function getNews1() {

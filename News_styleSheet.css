@@ -15,11 +15,10 @@ Nav bar
 /////////////////////*/
 .navbar{
     background-color: #fec226;
-    position: relative;
 }
 .container-fluid{
     height: 100px;
-    position: relative;
+    
 }
 .container-fluid .navbar-brand{
     font-family: 'lobster', serif;
@@ -47,16 +46,14 @@ cards
     }
 }
 .cart{
-    position: relative;
     height: 40px;
     background-color: #000;
     color: #fff;
-    margin: 10px auto;
+    margin: 10px 0 10px 0;
     padding: 5px;
     width: 80%;
     max-width: 500px;
 }
 .cart h1{
     font-size: 20px;
-    text-align: center;
 }
