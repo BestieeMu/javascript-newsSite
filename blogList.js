@@ -72,7 +72,7 @@ async function getNews1() {
     <div class="carousel-item active">
       <img src="${response.articles[2].media}" style="height: 400px; object-fit: cover;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 style='font-size: 50px;'>${response.articles[2].title}</h5>
+        <h5 style='font-size: 30px;'>${response.articles[2].title}</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
@@ -86,7 +86,7 @@ async function getNews1() {
     <div class="carousel-item">
       <img src="${response.articles[6].media}" style="height: 400px; object-fit: cover;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 style='font-size: 50px;'>${response.articles[6].title}</h5>
+        <h5 style='font-size: 30px;'>${response.articles[6].title}</h5>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
