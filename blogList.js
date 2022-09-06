@@ -15,43 +15,33 @@ async function getNews() {
     for (let i = 0; i < response?.articles?.length; i++) {
      const output = document.getElementById('demo');
     
-    
-
-     
      try{
-        
           output.innerHTML += `
           <div class="container">
-  <div class="row">
-    <div class="col ">
-    <div class='card' style='border: 2px solid green; padding: 0px;'>
-    <div class='card-body' style="display: flex; flex-direction: row;">
-<image src="${response.articles[i].media}" style="width: 200px; height: 150px;" />
-
-    <div class='card-text' style="display: flex; flex-direction: column; padding-left: 15px;">
-    <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}&name=chidera"><h4 style='  color:#a10035;'>${response.articles[i].title}</h4></a>
+           <div class="row">
+             <div class="col "> 
+         <div class='card' style='border: 2px solid green; padding: 0px;'>
+        <div class='card-body' style="display: flex; flex-direction: row;">
+             <image src="${response.articles[i].media}" style="width: 200px; height: 150px;" />
+             
+                <div class='card-text' style="display: flex; flex-direction: column; padding-left: 15px;">          
+    <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}&name=chidera"><h4 style='color:#a10035;'>${response.articles[i].title}</h4></a>
+  </div>
+  
+   </div>
     </div>
-    </div>
-    </div>
+    
     </div>
   </div>
-</div>
-          
-          ` 
-        
-     
+</div> `; 
      }
-     catch(err){
+        catch(err){
         console.log(err);
          }
     }
   })
-
-
-
 }
-getNews()
-
+getNews()// calling the fuction here
 
 async function getNews1() {
   const options = {
@@ -65,27 +55,24 @@ async function getNews1() {
  .then(response => response.json())
  .then(response =>  {
        for (let i = 0; i <=0; i++) {
-       
         const output1 = document.getElementById('demo1');
-       
-       
-   
-        
+         
         try{
-           
+          //carousel that display only image and title from the API articles
+          
              output1.innerHTML += `
-             
+    
              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
+         <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="${response.articles[2].media}" style="height: 400px; object-fit: cover;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 style='font-size: 50px;'>${response.articles[2].title}</h5>
+        <h5 style='font-size: 30px;'>${response.articles[2].title}</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
@@ -99,7 +86,7 @@ async function getNews1() {
     <div class="carousel-item">
       <img src="${response.articles[6].media}" style="height: 400px; object-fit: cover;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 style='font-size: 50px;'>${response.articles[6].title}</h5>
+        <h5 style='font-size: 30px;'>${response.articles[6].title}</h5>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
@@ -113,20 +100,14 @@ async function getNews1() {
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-             
-             ` 
-           
-        
-        }
-        catch(err){
+       `; 
+          }
+           catch(err){
            console.log(err);
             }
        }
      })
-   
-   
-   
    }
-   getNews1()
+   getNews1() //calling the second function
 
    
