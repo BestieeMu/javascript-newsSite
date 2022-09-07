@@ -4,7 +4,7 @@
     margin: 0;
 }
 .all-cont{
-    width: 100%;
+    position: relative;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -39,11 +39,9 @@ cards
     grid-template-columns: 1fr;
     height: 2000px;
     overflow: hidden;
+    border: 2px solid black;
 }
-@media screen and (min-width: 700px){
-    #demo{
-        grid-template-columns: repeat(2, 1fr);
-    }
+#newsCardHolder{
 }
 .cart{
     height: 40px;
@@ -57,4 +55,22 @@ cards
 .cart h1{
     font-size: 20px;
     text-align: center;
+}
+#newsLink{
+    font-size: 1.2rem;
+}
+
+/*=============Responsiveness starts===============*/
+@media screen and (min-width: 700px){
+    #demo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #newsLink{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 300px){
+    #newsLink{
+        font-size: 1rem;
+    }
 }
