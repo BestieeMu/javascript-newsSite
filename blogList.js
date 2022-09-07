@@ -1,3 +1,9 @@
+
+
+
+
+
+
 imges = []
 
 async function getNews() {
@@ -8,7 +14,7 @@ async function getNews() {
     'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
   }
 };
- await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=car&lang=en&sort_by=relevancy&page=1&media=True', options)
+ await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=sports&lang=en&sort_by=relevancy&page=1&media=True', options)
  .then(response => response.json())
  .then(response =>  {
    console.log(response);
@@ -16,7 +22,8 @@ async function getNews() {
      const output = document.getElementById('demo');
     
      try{
-          output.innerHTML += `
+      //the news card codes////////////////
+          output.innerHTML += ` 
           <div class="container">
            <div class="row">
              <div class="col "> 
@@ -41,7 +48,7 @@ async function getNews() {
     }
   })
 }
-getNews()// calling the fuction here
+getNews() // calling the fuction here
 
 async function getNews1() {
   const options = {
@@ -51,7 +58,7 @@ async function getNews1() {
       'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
     }
   };
- await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=politics&lang=en&sort_by=relevancy&page=1&media=True', options)
+ await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=fashion&lang=en&sort_by=relevancy&page=1&media=True', options)
  .then(response => response.json())
  .then(response =>  {
        for (let i = 0; i <=0; i++) {
@@ -72,22 +79,22 @@ async function getNews1() {
     <div class="carousel-item active">
       <img src="${response.articles[2].media}" style="height: 400px; object-fit: cover;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 style='font-size: 30px;'>${response.articles[2].title}</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5 style='font-size: 30px; background-color: hsla(0, 0%, 0%, 0.690);'>${response.articles[2].title}</h5>
+
       </div>
     </div>
     <div class="carousel-item">
       <img src="${response.articles[4].media}" style="height: 400px; object-fit: cover;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 style='font-size: 50px;'>${response.articles[4].title}</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5 style='font-size: 30px;background-color: hsla(0, 0%, 0%, 0.690);'>${response.articles[4].title}</h5>
+ 
       </div>
     </div>
     <div class="carousel-item">
       <img src="${response.articles[6].media}" style="height: 400px; object-fit: cover;" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5 style='font-size: 30px;'>${response.articles[6].title}</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5 style='font-size: 30px; background-color: hsla(0, 0%, 0%, 0.690);  '>${response.articles[6].title}</h5>
+        
       </div>
     </div>
   </div>
