@@ -4,7 +4,7 @@
     margin: 0;
 }
 .all-cont{
-    width: 100%;
+    position: relative;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -39,21 +39,36 @@ cards
     grid-template-columns: 1fr;
     height: 2000px;
     overflow: hidden;
-}
-@media screen and (min-width: 700px){
-    #demo{
-        grid-template-columns: repeat(2, 1fr);
-    }
+    position: relative;
 }
 .cart{
     height: 40px;
     background-color: #000;
     color: #fff;
-    margin: 10px 0 10px 0;
+    margin: 20px auto;
     padding: 5px;
     width: 80%;
     max-width: 500px;
 }
 .cart h1{
     font-size: 20px;
+    text-align: center;
+}
+#newsLink{
+    font-size: 1.2rem;
+}
+
+/*=============Responsiveness starts===============*/
+@media screen and (min-width: 700px){
+    #demo{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #newsLink{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 300px){
+    #newsLink{
+        font-size: .9rem;
+    }
 }
