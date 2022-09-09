@@ -25,14 +25,14 @@ async function getNews() {
       //the news card codes////////////////
           output.innerHTML += ` 
           <div class="container" id="newsCardHolder">
-           <div class="row">
-             <div class="col "> 
+           <div>
+             <div> 
          <div class='card' style='border: 2px solid green; padding: 0px;'>
         <div class='card-body' style="display: flex; flex-direction: row;">
-             <image src="${response.articles[i].media}" style="width: 200px; height: 150px;" id="newsImg"/>
+             <image src="${response.articles[i].media}" id="newsImg"/>
              
-                <div class='card-text' style="display: flex; flex-direction: column; padding-left: 15px;">          
-    <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}&name=chidera"><h4 style='color:#a10035;' id="newsLink">${response.articles[i].title}</h4></a>
+                <div class='card-text' style="display: flex; flex-direction: column; padding-left: 12px;">          
+    <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}&name=chidera"><h4 id="newsLink">${response.articles[i].title}</h4></a>
   </div>
   
    </div>
