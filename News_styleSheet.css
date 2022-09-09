@@ -54,6 +54,10 @@ cards
     font-size: 20px;
     text-align: center;
 }
+#newsImg{
+    width: 200px;
+    height: 150px;
+}
 #newsLink{
     font-size: 1.2rem;
 }
