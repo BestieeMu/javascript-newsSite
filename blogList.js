@@ -25,8 +25,8 @@ async function getNews() {
       //the news card codes////////////////
           output.innerHTML += ` 
           <div class="container" id="newsCardHolder">
-           <div class="row">
-             <div class="col "> 
+           <div>
+             <div> 
          <div class='card' style='border: 2px solid green; padding: 0px;'>
         <div class='card-body' style="display: flex; flex-direction: row;">
              <image src="${response.articles[i].media}" id="newsImg"/>
