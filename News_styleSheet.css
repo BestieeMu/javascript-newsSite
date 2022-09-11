@@ -15,6 +15,7 @@ Nav bar
 /////////////////////*/
 .navbar{
     background-color: #fec226;
+    width: 100%;
 }
 .container-fluid{
     height: 100px;
@@ -29,7 +30,7 @@ Nav bar
 .search-box{
     position: absolute;
     right: 5%;
-    }
+}
 /*//////////////
 cards
 /////////////////*/
@@ -77,9 +78,9 @@ cards
         font-size: 1.5rem;
     }
 }
-@media screen and (max-width: 300px){
+@media screen and (max-width: 350px){
     #newsLink{
-        font-size: .8rem;
+        font-size: .7rem;
     }
     #brand{
         font-size: 2rem;
