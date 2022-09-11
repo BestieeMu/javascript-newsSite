@@ -78,7 +78,7 @@ cards
         font-size: 1.5rem;
     }
 }
-@media screen and (max-width: 350px){
+@media screen and (max-width: 400px){
     #newsLink{
         font-size: .7rem;
     }
