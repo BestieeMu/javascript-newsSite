@@ -64,16 +64,24 @@ cards
 }
 
 /*=============Responsiveness starts===============*/
-@media screen and (min-width: 700px){
+@media screen and (min-width: 800px){
     #demo{
         grid-template-columns: repeat(2, 1fr);
     }
+    #newsLink{
+        font-size: 1.1rem;
+    }
+}
+@media screen and (min-width: 967px){
     #newsLink{
         font-size: 1.5rem;
     }
 }
 @media screen and (max-width: 300px){
     #newsLink{
-        font-size: .9rem;
+        font-size: .8rem;
+    }
+    #brand{
+        font-size: 2rem;
     }
 }
