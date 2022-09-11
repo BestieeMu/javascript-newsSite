@@ -4,7 +4,7 @@
 
 
 
-imges = []
+//imges = []
 
 async function getNews() {
   const options = {
