@@ -113,3 +113,7 @@ async function getNews1() {
    getNews1() //calling the second function
 
    
+
+
+
+
