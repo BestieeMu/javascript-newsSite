@@ -20,7 +20,7 @@ async function getNews() {
     }
   };
     let _id = id; 
-    await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=car&lang=en&sort_by=relevancy&page=1&media=True', options)
+    await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=sports&lang=en&sort_by=relevancy&page=1&media=True', options)
    .then(response => response.json()) 
    .then(response =>  {
          let resData = response?.articles //assinging the articles array to resData

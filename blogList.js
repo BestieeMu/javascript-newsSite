@@ -27,7 +27,7 @@ async function getNews() {
              <image src="${response.articles[i].media}" id="newsImg"/>
              
                 <div class='card-text' style="display: flex; flex-direction: column; padding-left: 12px;">          
-    <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}&name=chidera"><h4 id="newsLink">${response.articles[i].title}</h4></a>
+    <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}"><h4 id="newsLink">${response.articles[i].title}</h4></a>
   </div>
   
    </div>
@@ -53,7 +53,7 @@ async function getNews1() {
       'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
     }
   };
- await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=fashion&lang=en&sort_by=relevancy&page=1&media=True', options)
+ await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=IT news&lang=en&sort_by=relevancy&page=1&media=True', options)
  .then(response => response.json())
  .then(response =>  {
        for (let i = 0; i <=0; i++) {
@@ -113,3 +113,7 @@ async function getNews1() {
    getNews1() //calling the second function
 
    
+
+
+
+
