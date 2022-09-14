@@ -1,5 +1,5 @@
 
-let
+let searchNews = document.getElementById('search');
 
 async function getNews() {
   const options = {
