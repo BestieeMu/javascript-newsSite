@@ -1,5 +1,5 @@
 
-
+let
 
 async function getNews() {
   const options = {
