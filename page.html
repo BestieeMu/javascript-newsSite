@@ -4,10 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="News_styleSheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine">
     <title>Document</title>
+    <style>
+        #data{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .h1{
+            margin: 30px 0 50px 0;
+        }
+       .h1 h1{
+         font-size: 35px; 
+        }
+        .h1 p{
+            font-size: 20px;
+            font-weight: lighter;
+            float: left;
+            margin-left: 100px;
+        }
+        img{
+            width: 1000px;
+             height: 400px;
+        }
+        
+        .summary{
+            position: relative;
+            left: 19%;
+            width: 800px;
+            font-kerning: normal;
+            margin: 30px 0 30px 0;
+            font-size: 25px; 
+        }
+     @media only screen and (max-width: 600px)  {
+            img{
+                width: 500px;
+            }
+            .h1 h1{
+                font-size: 25px;
+                color: #A10035;
+            }
+            .h1 p{
+            font-size: 15px;
+            font-weight: lighter;
+            float: left;
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+        .summary{
+            position: relative;
+            left: 0%;
+            max-width: 500px;
+            font-kerning: normal;
+            margin: 30px 0 30px 0;
+            font-size: 20px;
+            word-break: break-word;
+        }
+
+        }
+    </style>
 </head>
-<body>
+<body >
+
+      <!--////////nav bar start here///////////-->
+
+      <nav class="navbar navbar-expand-lg " id="navHeader">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="brand"><span style="color: #A10035;">Trend</span>News</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           
+            <form class="d-flex search-box" id="search">
+              <input class="form-control me-2" type="search" placeholder="Search"  aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <!--////////nav bar ends here///////////-->
     <div id="data"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
     <script src="pageScript.js"></script>
 </body>
 </html>
