@@ -14,6 +14,7 @@
 Nav bar
 /////////////////////*/
 .navbar{
+   
     background-color: #fec226;
     width: 100%;
 }
@@ -85,4 +86,12 @@ cards
     #brand{
         font-size: 2rem;
     }
+    #ads{
+        width: 410px;
+    }
+}
+@media screen and (max-width: 395px){
+#ads{
+    width: 300px;
+}
 }

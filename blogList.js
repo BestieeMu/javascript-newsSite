@@ -9,7 +9,7 @@ async function getNews() {
     'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
   }
 };
- await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=sports&lang=en&sort_by=relevancy&page=1&media=True', options)
+ await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=sport news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
  .then(response => response.json())
  .then(response =>  {
    console.log(response);
@@ -53,7 +53,7 @@ async function getNews1() {
       'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
     }
   };
- await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=IT news&lang=en&sort_by=relevancy&page=1&media=True', options)
+ await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=political news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
  .then(response => response.json())
  .then(response =>  {
        for (let i = 0; i <=0; i++) {
