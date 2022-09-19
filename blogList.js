@@ -22,7 +22,11 @@ async function getNews() {
           <div class="container" id="newsCardHolder">
            <div>
              <div> 
-         <div class='card' style='border: 2px solid green; padding: 0px;'>
+         <div class='card' style='box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
+                                -webkit-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
+                                  -moz-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7); 
+                                  padding: 0px;'>
+
         <div class='card-body' style="display: flex; flex-direction: row;">
              <image src="${response.articles[i].media}" id="newsImg"/>
              
