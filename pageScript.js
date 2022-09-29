@@ -33,8 +33,8 @@ console.log(resData);
               <p>published date: ${list[0].published_date}</p>
           </div>
 
-            <div class=' media'>
-          <image src="${list[0].media}"  />
+          <div class='media' id="pageImg">
+          <image src="${list[0].media}"  class="w-100"/>
           </div>
          
           <div class='container-fluid summary'  >
