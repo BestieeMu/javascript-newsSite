@@ -37,7 +37,7 @@ console.log(resData);
           <image src="${list[0].media}"  class="w-100"/>
           </div>
          
-          <div class='container-fluid summary'  >
+          <div class='summary'>
             <p>${list[0].summary}</p>
           </div> 
          </div>
