@@ -28,10 +28,10 @@ async function getNews() {
 console.log(resData);
          document.getElementById('data').innerHTML +=`
          <div class='container-fluid section' >  <!--the page container -->
-           <div class='container-fluid h1' >
+           <div class='h1' >
               <h1 >${list[0].title}</h1>
               <p>published date: ${list[0].published_date}</p>
-          </div>
+          </div><br/>
 
           <div class='media' id="pageImg">
           <image src="${list[0].media}"  class="w-100"/>
