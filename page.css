@@ -4,19 +4,18 @@
     margin: 0;
 }
 #data{
-    display: flex;
-    justify-content: center;
-    text-align: center;
 }
-.h1{
-    margin: 30px 0 50px 0;
+.heading{
+    margin: 30px auto 50px auto;
     font-family: sans-serif;
+    max-width: 1000px;
+    padding: 16px;
 }
-.h1 h1{
+.heading h1{
  font-size: 35px; 
    color: #A10035;
 }
-.h1 p{
+.heading p{
     font-family: sans-serif;
     font-size: 20px;
     font-weight: lighter;
@@ -38,6 +37,40 @@
     margin: 30px auto 0 auto;
     max-width: 1000px;
 }
+#moreHeading{
+    text-align: center;
+}
+#knowMore{
+    position: relative;
+    margin: 0 auto 10px auto;
+    max-width: 1000px;
+    gap: 30px;
+    border: 2px solid;
+    padding: 10px 16px 10px 16px;
+}
+#knowMore>div{
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#knowMore>div>div{
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    height: fit-content;
+    line-height: 18px;
+    font-size: .9rem;
+    bottom: 0px;
+    color: white;
+    padding: 5px;
+}
+
+/*==========Responsiveness starts here==========*/
 @media screen and (min-width: 700px){
     #pageImg{
         height: 400px;
@@ -48,11 +81,11 @@
        width: 100%;
         height: 250px;
     }
-    .h1 h1{
+    .heading h1{
         font-size: 25px;
         color: #A10035;
     }
-    .h1 p{
+    .heading p{
     font-size: 15px;
     font-weight: lighter;
     float: left;
