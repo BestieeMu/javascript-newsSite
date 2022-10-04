@@ -7,6 +7,7 @@ window.onload = function pageLog(){
     let name = params.get("name");
    
     getNews() // calling the getnews function here
+    getMore();
 
 }
 
@@ -27,11 +28,11 @@ async function getNews() {
          var list = resData.filter(news => news._id === id); //filtering the arrays with the id, cheking if id exist in news._id
 console.log(resData);
          document.getElementById('data').innerHTML +=`
-         <div class='container-fluid section' >  <!--the page container -->
-           <div class='h1' >
-              <h1 >${list[0].title}</h1>
+         <div class='section'>  <!--the page container -->
+           <div class='heading'>
+              <h1>${list[0].title}</h1>
               <p>published date: ${list[0].published_date}</p>
-          </div><br/>
+          </div>
 
           <div class='media' id="pageImg">
           <image src="${list[0].media}"  class="w-100"/>
@@ -44,4 +45,41 @@ console.log(resData);
          `;
          
     }) 
+  }
+
+
+
+
+  async function getMore() {
+    const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'af5aa19560msh7b4b5aaf5baf3f4p133455jsna0150ed2dc74',
+      'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
+    }
+  };
+   await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=fashion news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
+   .then(response => response.json())
+   .then(response =>  {
+     console.log(response);
+      for (let i = 0; i < 3; i++) {
+       const showfield = document.getElementById('knowMore');
+      
+       try{
+        //the news card codes////////////////
+            showfield.innerHTML += `
+           <div style="box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
+                       -webkit-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
+                       -moz-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7); 
+                        padding: 0px; background-image: url('${response.articles[i].media}');" class="my-3">
+                        <div>
+                        ${response.articles[i].title}
+                        </div>
+  </div> `; 
+       }
+          catch(err){
+          console.log(err);
+           }
+      }
+    })
   }
