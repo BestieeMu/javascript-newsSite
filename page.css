@@ -39,13 +39,15 @@
 }
 #moreHeading{
     text-align: center;
+    margin-bottom: 0;
+    margin-top: 50px;
 }
 #knowMore{
     position: relative;
     margin: 0 auto 10px auto;
     max-width: 1000px;
     gap: 30px;
-    border: 2px solid;
+    /*border: 2px solid;*/
     padding: 10px 16px 10px 16px;
 }
 #knowMore>div{
