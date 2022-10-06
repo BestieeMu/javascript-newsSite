@@ -48,13 +48,13 @@
     max-width: 1000px;
     gap: 30px;
     /*border: 2px solid;*/
-    padding: 10px 16px 10px 16px;
+    padding: 10px 16px;
 }
 #knowMore>div{
     position: relative;
     cursor: pointer;
     border-radius: 10px;
-    width: 100%;
+    width: 30%;
     height: 10rem;
     overflow: hidden;
     background-size: cover;
@@ -62,10 +62,11 @@
     background-repeat: no-repeat;
 }
 #knowMore>div>div{
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .7);
     position: absolute;
     height: fit-content;
     line-height: 18px;
+    width: 100%;
     font-size: .9rem;
     bottom: 0px;
     color: white;
@@ -78,7 +79,7 @@
         height: 400px;
     }
 }
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 576px)  {
     img{
        width: 100%;
         height: 250px;
@@ -93,4 +94,23 @@
     float: left;
     margin-top: 10px;
 }
+#knowMore{
+    padding: 10px 5rem;
+}
+#knowMore>div{
+    width: 100%;
+}
+}
+@media (min-width: 577px) and (max-width: 650px) {
+    #knowMore{
+        gap: 10px
+    }
+    #knowMore>div{
+        width: 40%;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    #knowMore{
+        gap: 30px
+    }
 }
