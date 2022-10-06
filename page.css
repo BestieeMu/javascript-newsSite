@@ -95,11 +95,16 @@
     margin-top: 10px;
 }
 #knowMore{
-    padding: 10px 5rem;
+    padding: 10px 2rem;
 }
 #knowMore>div{
     width: 100%;
 }
+}
+@media (min-width: 430px) and (max-width: 575px) {
+    #knowMore{
+        padding: 10px 5rem;
+    }
 }
 @media (min-width: 577px) and (max-width: 650px) {
     #knowMore{
@@ -109,8 +114,9 @@
         width: 40%;
     }
 }
+
 @media (min-width: 577px) and (max-width: 768px) {
     #knowMore{
-        gap: 30px
+        gap: 30px;
     }
 }
