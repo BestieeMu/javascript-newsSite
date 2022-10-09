@@ -64,17 +64,17 @@ async function getNews() {
    
       for (let i = 0; i < response.articles.length; i++) {
        const showfield = document.getElementById('knowMore');
-       const random = Math.floor(Math.random() * response.articles[i].length)
-       console.log( response.articles[i][random].title);
+       const random = Math.floor(Math.random() * 10)
+       console.log(random);
        try{
         //the news card codes////////////////
             showfield.innerHTML += `
            <div style="box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -webkit-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -moz-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7); 
-                        padding: 0px; background-image: url('${random, response.articles[i][random].media}');" class="mb-3">
+                        padding: 0px; background-image: url('${response.articles[random].media}');" class="mb-3">
                         <div>
-                        ${random, response.articles[i][random].title}
+                        ${response.articles[random].title}
                         </div>
   </div> `; 
        }
