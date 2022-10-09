@@ -62,7 +62,7 @@ async function getNews() {
    .then(response => response.json())
    .then(response =>  {
    
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < response.articles.length; i++) {
        const showfield = document.getElementById('knowMore');
        const random = Math.floor(Math.random() * 10)
        console.log(response.articles[random].title);
