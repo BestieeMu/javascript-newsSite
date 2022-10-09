@@ -26,7 +26,7 @@ async function getNews() {
    .then(response =>  {
          let resData = response?.articles //assinging the articles array to resData
          var list = resData.filter(news => news._id === id); //filtering the arrays with the id, cheking if id exist in news._id
-console.log(resData);
+
          document.getElementById('data').innerHTML +=`
          <div class='section'>  <!--the page container -->
            <div class='heading'>
@@ -61,11 +61,11 @@ console.log(resData);
    await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=fashion news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
    .then(response => response.json())
    .then(response =>  {
-     console.log(response);
-      for (let i = 0; i < response?.articles?.length; i++) {
+   
+      for (let i = 0; i < response.articles.length; i++) {
        const showfield = document.getElementById('knowMore');
        const random = Math.floor(Math.random() * response.articles[i].length)
-       console.log(random, response.articles[i][random].title);
+       console.log(random, response.articles[i][random]);
        try{
         //the news card codes////////////////
             showfield.innerHTML += `
