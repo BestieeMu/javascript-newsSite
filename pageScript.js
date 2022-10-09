@@ -65,7 +65,7 @@ async function getNews() {
       for (let i = 0; i < response.articles.length; i++) {
        const showfield = document.getElementById('knowMore');
        const random = Math.floor(Math.random() * 10)
-       console.log(random);
+       console.log(response.articles[i].title);
        try{
         //the news card codes////////////////
             showfield.innerHTML += `
