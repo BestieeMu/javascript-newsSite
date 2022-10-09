@@ -62,18 +62,19 @@ console.log(resData);
    .then(response => response.json())
    .then(response =>  {
      console.log(response);
-      for (let i = 0; i < 6; i++) {
+      for (let i = 0; i < response?.articles?.length; i++) {
        const showfield = document.getElementById('knowMore');
-      
+       const random = Math.floor(Math.random() * response.articles[i].length)
+       console.log(random);
        try{
         //the news card codes////////////////
             showfield.innerHTML += `
            <div style="box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -webkit-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -moz-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7); 
-                        padding: 0px; background-image: url('${response.articles[i].media}');" class="mb-3">
+                        padding: 0px; background-image: url('${random.media}');" class="mb-3">
                         <div>
-                        ${response.articles[i].title}
+                        ${random.title}
                         </div>
   </div> `; 
        }
