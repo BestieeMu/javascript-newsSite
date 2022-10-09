@@ -72,9 +72,9 @@ console.log(resData);
            <div style="box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -webkit-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -moz-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7); 
-                        padding: 0px; background-image: url('${random.media}');" class="mb-3">
+                        padding: 0px; background-image: url('${random, response.articles[i][random].media}');" class="mb-3">
                         <div>
-                        ${random.title}
+                        ${random, response.articles[i][random].title}
                         </div>
   </div> `; 
        }
