@@ -1,3 +1,4 @@
+
 let newsJson = '';
 
 let searchNews = document.getElementById('search');
@@ -11,12 +12,18 @@ searchNews.addEventListener('keyup', (e) =>{
     );
      });
      for (let i = 0; i < filterdNews.length; i++) {
+try{
+     document.getElementById('result').innerHTML += `
+
+     <p>${filterdNews[i].title}</p>
      
-      console.log(filterdNews[i].title);
+     `;
+} catch(err){
+  console.log(err);
+   }
      }
     
 });
-
 async function getNews() {
   const options = {
   method: 'GET',
