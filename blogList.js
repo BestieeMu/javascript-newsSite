@@ -1,5 +1,21 @@
+let newsJson = '';
 
 let searchNews = document.getElementById('search');
+
+searchNews.addEventListener('keyup', (e) =>{
+  e.preventDefault();
+ const searchKey = e.target.value;
+   const filterdNews =  newsJson.filter( title => {
+    return(
+      title.title.includes(searchKey)
+    );
+     });
+     for (let i = 0; i < filterdNews.length; i++) {
+     
+      console.log(filterdNews[i].title);
+     }
+    
+});
 
 async function getNews() {
   const options = {
@@ -12,7 +28,8 @@ async function getNews() {
  await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=sport news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
  .then(response => response.json())
  .then(response =>  {
-   console.log(response);
+     newsJson = response.articles;
+  
     for (let i = 0; i < response?.articles?.length; i++) {
      const output = document.getElementById('demo');
     
