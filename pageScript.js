@@ -63,19 +63,18 @@ async function getNews() {
    .then(response => response.json())
    .then(response =>  {
    
-      for (let i = 0; i < response.articles.length; i++) {
+      for (let i = 0; i < 9; i++) {
        const showfield = document.getElementById('knowMore');
-       const random = Math.floor(Math.random() * 10)
-       console.log(response.articles[i][random].title);
+      
        try{
         //the news card codes////////////////
             showfield.innerHTML += `
            <div style="box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -webkit-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -moz-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7); 
-                        padding: 0px; background-image: url('${response.articles[random].media}');" class="mb-3">
+                        padding: 0px; background-image: url('${response.articles[i].media}');" class="mb-3">
                         <div>
-                        ${response.articles[random].title}
+                       <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}">${response.articles[i].title}</a>
                         </div>
   </div> `; 
        }
@@ -97,7 +96,7 @@ async function getNews() {
       }
     };
       let _id = id; 
-      await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=todays news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
+      await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=fashion news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
      .then(response => response.json()) 
      .then(response =>  {
            let resData = response?.articles //assinging the articles array to resData
