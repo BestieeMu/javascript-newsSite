@@ -64,6 +64,24 @@ cards
     font-size: 1.2rem;
     color:#a10035;
 }
+.searchReasult{
+    position: absolute;
+    top: 110%;
+    word-wrap: break-word;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.3px);
+    -webkit-backdrop-filter: blur(2.3px);
+    border: 1px solid rgba(255, 255, 255, 0.17);
+   overflow: scroll;
+    z-index: 10;
+}
 
 /*=============Responsiveness starts===============*/
 @media screen and (min-width: 800px){

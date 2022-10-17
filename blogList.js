@@ -1,6 +1,29 @@
 
+let newsJson = '';
+
 let searchNews = document.getElementById('search');
 
+searchNews.addEventListener('keyup', (e) =>{
+  e.preventDefault();
+ const searchKey = e.target.value;
+   const filterdNews =  newsJson.filter( title => {
+    return(
+      title.title.includes(searchKey)
+    );
+     });
+     for (let i = 0; i < filterdNews.length; i++) {
+try{
+     document.getElementById('result').innerHTML += `
+
+     <p>${filterdNews[i].title}</p>
+     
+     `;
+} catch(err){
+  console.log(err);
+   }
+     }
+    
+});
 async function getNews() {
   const options = {
   method: 'GET',
@@ -12,7 +35,8 @@ async function getNews() {
  await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=sport news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
  .then(response => response.json())
  .then(response =>  {
-   console.log(response);
+     newsJson = response.articles;
+  
     for (let i = 0; i < response?.articles?.length; i++) {
      const output = document.getElementById('demo');
     
@@ -97,14 +121,7 @@ async function getNews1() {
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+ 
 </div>
        `; 
           }
