@@ -1,4 +1,5 @@
-      
+
+//import {pickCategory} from './blogList.js';
 
 window.onload = function pageLog(){  
     
@@ -8,9 +9,10 @@ window.onload = function pageLog(){
    
     getNews() // calling the getnews function here
     getMore();
-       GetPageNew(); // calling the function here
+       //GetPageNew(); // calling the function here
 
 }
+
 
 
 async function getNews() {
@@ -22,7 +24,7 @@ async function getNews() {
     }
   };
     let _id = id; 
-    await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=sport news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
+    await fetch(`https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=fashion &lang=en&sort_by=relevancy&country=ng&page=1&media=True`, options)
    .then(response => response.json()) 
    .then(response =>  {
          let resData = response?.articles //assinging the articles array to resData
@@ -48,8 +50,8 @@ async function getNews() {
     }) 
   }
 
-
-
+  let ranNum = 0;
+  picked = [];
 
   async function getMore() {
     const options = {
@@ -65,16 +67,33 @@ async function getNews() {
    
       for (let i = 0; i < 9; i++) {
        const showfield = document.getElementById('knowMore');
-      
+       
+      let min = 0,
+      max = response?.articles?.length;
+      //Pick a random value
+      pick = Math.floor(Math.random() * (max - min + 1)+ min);
+      //If the number generated has been picked before:
+      if(picked.includes(pick)){
+          //Print the condition to perform
+          console.log(`Does it include ${pick}: true. Then leave ${pick}`);
+      }else{
+          //If the number generated hasn't been picked before:
+          console.log(`Does it include ${pick}: false. Then post ${pick}`);
+          ranNum = pick;
+          //Push the number to the picked array
+          picked.push(pick);
+    }
+
+
        try{
         //the news card codes////////////////
             showfield.innerHTML += `
            <div style="box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -webkit-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -moz-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7); 
-                        padding: 0px; background-image: url('${response.articles[i].media}');" class="mb-3">
+                        padding: 0px; background-image: url('${response.articles[ranNum].media}');" class="mb-3">
                         <div>
-                       <a style="text-decoration: none;" href="/page.html?id=${response.articles[i]._id}">${response.articles[i].title}</a>
+                       <a style="text-decoration: none;" href="/page.html?id=${response.articles[ranNum]._id}">${response.articles[ranNum].title}</a>
                         </div>
   </div> `; 
        }
