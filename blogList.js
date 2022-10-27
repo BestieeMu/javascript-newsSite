@@ -32,7 +32,9 @@ async function getNews() {
     'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
   }
 };
- await fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=sport news&lang=en&sort_by=relevancy&country=ng&page=1&media=True', options)
+
+
+ await fetch(`https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=fashion news&lang=en&sort_by=relevancy&country=ng&page=1&media=True`, options)
  .then(response => response.json())
  .then(response =>  {
      newsJson = response.articles;
