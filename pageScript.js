@@ -50,8 +50,13 @@ async function getNews() {
     }) 
   }
 
-  let ranNum = 0;
-  picked = [];
+  let rand = 0;
+  //30 items of index 0-29
+  const randNums = [];
+  while(randNums.length < 30) {
+  randNums.push(randNums.length);
+  randNums.sort(() => .5 - Math.random());
+}
 
   async function getMore() {
     const options = {
@@ -68,8 +73,9 @@ async function getNews() {
       for (let i = 0; i < 9; i++) {
        const showfield = document.getElementById('knowMore');
        
+       /*
       let min = 0,
-      max = response?.articles?.length;
+      max = 30;
       //Pick a random value
       pick = Math.floor(Math.random() * (max - min + 1)+ min);
       //If the number generated has been picked before:
@@ -79,11 +85,12 @@ async function getNews() {
       }else{
           //If the number generated hasn't been picked before:
           console.log(`Does it include ${pick}: false. Then post ${pick}`);
-          ranNum = pick;
           //Push the number to the picked array
           picked.push(pick);
+          ranNum = pick;
     }
-
+    */
+   rand++;
 
        try{
         //the news card codes////////////////
@@ -91,9 +98,9 @@ async function getNews() {
            <div style="box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -webkit-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7);
                        -moz-box-shadow: 2px 1px 7px 3px rgba(122,122,122,0.7); 
-                        padding: 0px; background-image: url('${response.articles[ranNum].media}');" class="mb-3">
+                        padding: 0px; background-image: url('${response.articles[randNums[rand]].media}');" class="mb-3">
                         <div>
-                       <a style="text-decoration: none;" href="/page.html?id=${response.articles[ranNum]._id}">${response.articles[ranNum].title}</a>
+                       <a style="text-decoration: none;" href="/page.html?id=${response.articles[randNums[rand]]._id}">${response.articles[randNums[rand]].title}</a>
                         </div>
   </div> `; 
        }
